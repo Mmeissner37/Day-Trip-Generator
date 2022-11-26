@@ -10,7 +10,7 @@
 
 
 
-greeting = "Welcome to the Day Trip Generator! Would you like some help deciding on plans for a vacation? Please, allow me to help you choose. "
+greeting = "Welcome to the Day Trip Generator! Would you like some help deciding on plans for a vacation? Please, allow me to help you. "
 
 print(greeting)
 
@@ -22,11 +22,18 @@ form_of_entertainments = ['Go on a hike', 'Go to Disney World', 'Go to a ballet'
 
 
 import random
-user_input = "Y", "N"
 
 
 print("What about the lovely city of", random.choice(destinations), "as a destination?")
 
+user_input = input()
+
+if input == "Yes":
+    print("Great choice!")
+elif input == "No":
+    print("Oh, my apologies")
+else:
+    print("I'm sorry. Please say Yes or No.")
 
 
 #print("Great choice! Now how about ", random.choice(restaurants), "as a restaurant?") 
