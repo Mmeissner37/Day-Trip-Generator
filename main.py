@@ -23,21 +23,27 @@ form_of_entertainments = ['Go on a hike', 'Go to Disney World', 'Go to a ballet'
 
 import random
 
+final_destination = random.choice(destinations)
+final_restaurant = random.choice(restaurants)
+final_transportation = random.choice(mode_of_transportations)
+final_entertainment = random.choice(form_of_entertainments)
 
-print("What about the lovely city of", random.choice(destinations), "as a destination?")
 
-user_input = input()
+print("What about the lovely city of", final_destination, "as a destination? Is that okay? Yes or No")
 
-if input == "Yes":
+user_input = input("")
+
+if user_input == "Yes":
     print("Great choice!")
-elif input == "No":
-    print("Oh, my apologies")
+elif user_input == "No":
+    print("Oh, my apologies. How about", final_destination,"?")
 else:
     print("I'm sorry. Please say Yes or No.")
 
 
-#print("Great choice! Now how about ", random.choice(restaurants), "as a restaurant?") 
-#print("Excellent! Would you like to travel by", random.choice(mode_of_transportations),"?")
-#print("Fantastic! During your trip what would you like to do? How about", random.choice(form_of_entertainments),"?")
+
+#print("Great choice! Now how about ", final_restaurant, "as a restaurant?") 
+#print("Excellent! Would you like to travel by", final_transportation),"?")
+#print("Fantastic! During your trip what would you like to do? How about", final_entertainment),"?")
 
 
