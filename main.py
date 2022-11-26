@@ -1,5 +1,5 @@
 # (5 points): As a developer, I want to make at least three commits with descriptive messages. 
-# (5 points): As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainment selections in their own separate lists. 
+
 # (5 points): As a user, I want a destination to be randomly selected for my day trip. 
 # (5 points): As a user, I want a restaurant to be randomly selected for my day trip. 
 # (5 points): As a user, I want a mode of transportation to be randomly selected for my day trip. 
@@ -11,8 +11,21 @@
 
 
 
-greeting = "Welcome to the Day Trip Generator! Having trouble deciding on plans for a quick vacation? Please allow me to help you choose."
+greeting = "Welcome to the Day Trip Generator! Would you like some help deciding on plans for a vacation? Please, allow me to help you choose. "
 
 print(greeting)
+
+
+destinations = ['Estes Park, CO', 'Orlando, FL', 'San Antonio, TX', 'Portland, ME', 'San Francisco, CA', 'New York City']
+restaurants = ['Grubsteak Restaurant', 'Santiagos Bodega Tapas Bar', '18 Oaks Steakhouse', 'Fore Street Restaurant', 'Sotto Mare Seafood', 'Jekyll and Hyde Club']
+mode_of_transportations = ['rental car', 'airplane', 'train', 'horseback']
+form_of_entertainments = ['Hiking', 'Disney World', 'Ballet', 'Cirque du Soleil', 'Broadway Musical'] 
+
+
+for destination in destinations: 
+    print(f"How about {destination} as a place to visit?")
+    
+
+
 
 
