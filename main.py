@@ -16,16 +16,25 @@ greeting = "Welcome to the Day Trip Generator! Would you like some help deciding
 print(greeting)
 
 
+
 destinations = ['Estes Park, CO', 'Orlando, FL', 'San Antonio, TX', 'Portland, ME', 'San Francisco, CA', 'New York City']
 restaurants = ['Grubsteak Restaurant', 'Santiagos Bodega Tapas Bar', '18 Oaks Steakhouse', 'Fore Street Restaurant', 'Sotto Mare Seafood', 'Jekyll and Hyde Club']
 mode_of_transportations = ['rental car', 'airplane', 'train', 'horseback']
 form_of_entertainments = ['Hiking', 'Disney World', 'Ballet', 'Cirque du Soleil', 'Broadway Musical'] 
 
 
-for destination in destinations: 
-    print(f"How about {destination} as a place to visit?")
-    
+random_destination = destinations[0]
+random_resturant = restaurants[0]
+random_mode_of_transportation = mode_of_transportations[0]
+random_form_of_entertainment = mode_of_transportations[0]
+
+user_input = "Yes", "No" 
+
+for destination in destinations:
+    print(f"How about {random_destination(1)} as a place to visit? Is that okay? ")
 
 
+for restaurant in restaurants:
+    print(f"How about {random_resturant} as a place to eat? Is that okay? ")
 
 
