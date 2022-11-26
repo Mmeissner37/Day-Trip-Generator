@@ -31,14 +31,20 @@ final_entertainment = random.choice(form_of_entertainments)
 
 print("What about the lovely city of", final_destination, "as a destination? Is that okay? Yes or No")
 
-user_input = input("")
 
-if user_input == "Yes":
-    print("Great choice!")
-elif user_input == "No":
-    print("Oh, my apologies. How about", final_destination,"?")
-else:
-    print("I'm sorry. Please say Yes or No.")
+valid_response = False
+
+while valid_response == False: 
+    user_input = input("")
+    if user_input == "Yes":
+        print("Great choice!")
+        valid_response = True 
+    elif user_input == "No":
+        print("Oh, my apologies. How about", random.choice(destinations),"?")
+        valid_response = False 
+    else:
+        print("I'm sorry. Please say Yes or No.")
+        valid_response = False 
 
 
 
