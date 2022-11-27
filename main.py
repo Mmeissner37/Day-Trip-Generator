@@ -17,34 +17,50 @@ print(greeting)
 
 destinations = ['Estes Park, CO', 'Orlando, FL', 'San Antonio, TX', 'Portland, ME', 'San Francisco, CA', 'New York City']
 restaurants = ['Grubsteak Restaurant', 'Santiagos Bodega Tapas Bar', '18 Oaks Steakhouse', 'Fore Street Restaurant', 'Sotto Mare Seafood', 'Jekyll and Hyde Club']
-mode_of_transportations = ['rental car', 'airplane', 'train', 'horseback']
+mode_of_transportations = ['Rental car', 'Airplane', 'Train', 'Horseback']
 form_of_entertainments = ['Go on a hike', 'Go to Disney World', 'Go to a ballet', 'See a Cirque du Soleil show', 'See a Broadway Musical'] 
 
-
 import random
+i = 0
 
-final_destination = random.choice(destinations)
-final_restaurant = random.choice(restaurants)
-final_transportation = random.choice(mode_of_transportations)
-final_entertainment = random.choice(form_of_entertainments)
-
-
-print("What about the lovely city of", final_destination, "as a destination? Is that okay? Yes or No")
-
+print("What about the lovely city of", destinations[0], "as a destination? Is that okay? Yes or No")
 
 valid_response = False
-
 while valid_response == False: 
     user_input = input("")
     if user_input == "Yes":
         print("Great choice!")
         valid_response = True 
     elif user_input == "No":
-        print("Oh, my apologies. How about", random.choice(destinations),"?")
+        print("Oh, my apologies. How about", destinations[i],"?")
+        i = i + 1
+        valid_response = False
+    else:
+        print("I'm sorry. Please say Yes or No.")
+        valid_response = False 
+final_dest = destinations[i - 1]
+
+print(final_dest, "is a great choice!")
+
+#Next is restaurant
+
+print("Next, let's chose a restaurant. How about", restaurants[0],"?")
+
+valid_response = False
+while valid_response == False: 
+    user_input = input("")
+    if user_input == "Yes":
+        print("Excellent!")
+        valid_response = True 
+    elif user_input == "No":
+        print("Oh, my apologies. How about", restaurants[i],"?")
+        i = i + 1
         valid_response = False 
     else:
         print("I'm sorry. Please say Yes or No.")
         valid_response = False 
+final_rest = restaurants[i - 1]
+print(final_rest, "is a fantastic decision!")
 
 
 
@@ -53,3 +69,11 @@ while valid_response == False:
 #print("Fantastic! During your trip what would you like to do? How about", final_entertainment),"?")
 
 
+
+# def run():
+#     print(final_destination)
+#     print(final_restaurant)
+#     print(final_transportation)
+#     print(final_entertainment) 
+
+# run()
